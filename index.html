@@ -1,0 +1,117 @@
+<html>
+    <head>
+		<meta name="author" content="Stewart Fitzpatrick, B5732227"/> 
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	    <meta http-equiv="Content-Security-Policy" content="">
+
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		
+		<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" charset="utf-8"></script>
+		<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" charset="utf-8"></script>
+		<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+		<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+		
+        <title>MegaMax Sale</title>
+    </head>
+    <body>
+			<div class="app">
+			<!--<form method="post" action="http://137.108.92.9/openstack/api/clients -->
+	   			<h1>MegaMax Sale</h1>
+				<div>
+					<!-- TODO I. User Information -->
+					
+					<!-- FR1.1 Valdating the OUCU starts with a letter and ends with a number.-->
+					<label>ID:</label>
+					<input type="text" pattern="^[a-zA-Z][0-1][0-9]$" id="oucu" name="oucu">
+					<br>
+					<label>PASS:</label>
+					<input type="text" id="pass" name="pass">
+					<br>
+					<label>Client:</label>
+					<input type="integer" id="client" name="client" value="1">
+					<input type="button" id="start" onclick="controller.start()" value="Begin Order"</button>
+				</div>
+
+
+				<div>
+					<!-- TODO II. Widget navigation buttons -->
+					<input type="button" id="prev" value="Prev Widget" onclick="controller.prev()"</button>
+					<input type="button" id="next" value="Next Widget" onclick="controller.next()"</button>
+					<br>
+					<label>Number:</label>
+					<input type="integer" id="number" name="number" value="2">
+					
+					
+				</div>
+				<div>
+					<!-- TODO III. Widget display-->
+					<br>
+					
+					<img src="" id="widgetImg" width="330" height="330">
+					<figcaption id="widgetCaption" </figcaption>
+				</div>
+				<div>
+					<label=""  id="base_price" </label>
+					
+					
+					
+				</div>
+				<div>
+					<!-- TODO IV. Order navigation buttons and display -->
+					<label>Agreed Price:</label>
+					<input type="integer" id="agreed_price" value="0.3" name="agreed_price">
+					<br>
+					<input type="button" id="add" value="Add to order" onclick="controller.add()"</button>
+					
+					<input type="button" id="end" value="End order" onclick="controller.end()"</button>
+					
+					
+					
+					<br> 
+					
+					<label=""  id="order_info" </label>
+					
+				</div>
+				<div>
+					<label=""  id="items" </label>
+					
+				</div>
+				<div>
+				<label=""  id="agreed_pence">
+				</div>
+				
+				<div>
+				<br>
+				<ul="" id="all_items"</ul>
+				</div>
+				<div>
+				
+				<table>
+					<tr>
+						<th>Subtotal:	</th>
+						<th>VAT:	</th>
+						<th>Total is:	</th>
+					</tr>
+					<tr>
+						<td style="width:25%;"><label=""  id="sub" </label></td>
+						<td style="width:25%;"><label=""  id="VAT" </label></td>
+						<td style="width:25%;"><label=""  id="total" </label></td>
+					</tr>
+				</table>
+				</div>
+				<div>
+				<!-- TODO V. Map canvas -->
+				<div>
+				<div id="mapContainer" style="height: 70vh; width: auto"></div>
+				
+        	</div>
+			
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/helpers.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+ 	</body>
+</html>
